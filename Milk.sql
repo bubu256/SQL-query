@@ -1,9 +1,9 @@
 ï»¿
 select Distinct c.* from CustomerTable as c, PurchaiseTable as p
-where c.CustomerId=p.CustomerId and p.ProductName='Ìîëîêî' 
+where c.CustomerId=p.CustomerId and p.ProductName='ÐœÐ¾Ð»Ð¾ÐºÐ¾' 
 and c.CustomerId NOT IN
 (
 	select CustomerId from PurchaiseTable 
-	where ProductName='Ñìåòàíà'
+	where ProductName='Ð¡Ð¼ÐµÑ‚Ð°Ð½Ð°'
 	and PurchaiseDatetime >= (select GETDATE() - 1 month)
 )
